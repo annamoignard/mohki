@@ -3,6 +3,7 @@
     <p>Name: <%= f.text_area :name %></p>
     <p>Price Range: <%= f.number_field :prce_range %> </p>
     <p>Speciality: <%= f.text_area :speciality %></p>
-    <% f.submit %>
+    <p>Logo: <%= f.file_field :picture, accept: 'image/png', 'image/jpg', 'image/jpeg' %></p>
+      <%= f.submit id: "Get Started!" %>
     <% end %>
 </div>
