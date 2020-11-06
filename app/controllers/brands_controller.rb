@@ -3,6 +3,11 @@ class BrandsController < ApplicationController
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
   before_action :authorize_user!, only: [:edit, :update, :destroy]
 
+  # display all brands, not just the user brand 
+  def index
+    @brands = Brand.all
+  end
+  
   def show 
   end 
 
@@ -20,13 +25,13 @@ class BrandsController < ApplicationController
     redirect_to brand_path(brand.id) #so they can view the brand that they created
   end
 
-  # def edit
-  # end
+  def edit
+  end
 
-  # def update
-  #   @brand.update(name: params[:brand][:name], price_range: params[:brand][:price_range], speciality: params[:brand][:speciality])
-  #   redirect_to brands_path 
-  # end
+  def update
+    @brand.update(name: params[:brand][:name], price_range: params[:brand][:price_range], speciality: params[:brand][:speciality])
+    redirect_to brand_path(brand.id)
+  end
 
   def destroy
     @brand.destroy

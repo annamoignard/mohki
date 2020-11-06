@@ -8,5 +8,5 @@
     <%= image_tag @brand.picture, class: "brand-logo" if @brand.picture.attached? %>
   </div>
 
-  <%# <%= link_to 'Edit', _brand_path %>
-  <%# <%= link_to 'Delete Brand Profile', brand_path, :method => :delete %> 
+  <%= link_to 'Edit Brand Profile', edit_brand_path %>
+  <%= link_to 'Delete Brand Profile', brand_path, :method => :delete %> 
