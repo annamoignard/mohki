@@ -14,7 +14,7 @@ class BrandsController < ApplicationController
   def create
     brand = current_user.brand.new(name: params[:brand][:name], price_range: params[:brand][:price_range], speciality: params[:brand][:speciality])
     brand.save 
-    redirect_to brands_path
+    redirect_to brand_path #so they can view the brand that they created
   end
 
   # def edit
