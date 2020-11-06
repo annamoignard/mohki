@@ -1,1 +1,10 @@
 <h1>BRAND SHOW PAGE</h1>
+
+ <div class="brand">
+    <p>Name: <%= @brand.name %></p>
+    <p>Price Range: <%= @brand.price_range %></p>
+    <p>Speciality: <%= @brand.speciality %></p>
+    <%= image_tag brand.picture, class="brand-logo" if brand.picture.attached? %>
+  </div>
+
+  
