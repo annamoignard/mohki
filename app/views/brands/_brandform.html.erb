@@ -1,0 +1,8 @@
+<div>
+    <%= form_with model: @brand, local: true do |f| %>
+    <p>Name: <%= f.text_area :name %></p>
+    <p>Price Range: <%= f.number_field :prce_range %> </p>
+    <p>Speciality: <%= f.text_area :speciality %></p>
+    <% f.submit %>
+    <% end %>
+</div>

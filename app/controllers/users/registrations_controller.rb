@@ -15,6 +15,9 @@ class Users::RegistrationsController < Devise::RegistrationsController
     if params[:user][:seller] == "Shopper"
       current_user.seller = false 
       current_user.save
+    elsif params[:user][:seller] == "Seller"
+      current_user.seller = true
+      current_user.save 
     end 
   end
 
@@ -54,10 +57,14 @@ class Users::RegistrationsController < Devise::RegistrationsController
   #   devise_parameter_sanitizer.permit(:account_update, keys: [:attribute])
   # end
 
-  # The path used after sign up.
-  # def after_sign_up_path_for(resource)
-  #   super(resource)
-  # end
+  # This is for when a seller signs up to create one new brand 
+  def after_sign_up_path_for(resource)
+    if params[:user][:seller] == "Seller"
+      new_brand_path
+    else
+      root_path #change this to listings page at a later date 
+    end 
+  end
 
   # The path used after sign up for inactive accounts.
   # def after_inactive_sign_up_path_for(resource)
