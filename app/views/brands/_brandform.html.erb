@@ -3,11 +3,10 @@
     <p>Name: <%= f.text_area :name %></p>
     <p>Price Range: <%= f.number_field :prce_range %> </p>
     <p>Speciality: <%= f.text_area :speciality %></p>
-    <p>Logo: <%= f.file_field :picture, accept: 'image/png', 'image/jpg', 'image/jpeg' %></p>
+    <p>Logo: <%= f.file_field :picture, accept: 'image/png, image/jpg, image/jpeg' %></p>
       <%= f.submit id: "Get Started!" %>
     <% end %>
 </div>
 
 
-  <%= link_to 'Edit', edit_brand_path %>
-  <%= link_to 'Delete Brand Profile', brand_path, :method => :delete %>
+
