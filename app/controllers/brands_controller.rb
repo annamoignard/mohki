@@ -1,10 +1,13 @@
 class BrandsController < ApplicationController
   before_action :authenticate_user! 
+  before_action :set_brand, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_user!, only: [:edit, :update, :destroy]
 
   def show 
   end 
 
   def new
+    redirect_to root_path unless current_user.brand.nil? #checking if the user has created a brand before
     @brand = Brand.new
   end
 
@@ -33,4 +36,8 @@ class BrandsController < ApplicationController
   def set_brand
     @brand = Brand.find(params[:id])
   end
+
+  def authorize_user! 
+    @brand.user_id == current_user.id
+  end 
 end
