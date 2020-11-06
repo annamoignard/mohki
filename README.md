@@ -1,24 +1,6 @@
-# README
+# Models
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Brand name:string price_range:integer speciality:string user:references 
+- validations = 1, 2, 3 
+- common thing todo is have many_to_many 
+### Listing name:string brand:references price:integer eco_rating:integer 
