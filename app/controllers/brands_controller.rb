@@ -36,13 +36,18 @@ class BrandsController < ApplicationController
   def destroy
     @brand.destroy
     #need a flash message in here or something 'are you SURE?'
-    # redirect_to successfully deleted (button = home)
+    redirect_to brands_path
+    #successfully deleted (button = home)
   end
 
   private
 
   def set_brand
     @brand = Brand.find(params[:id])
+  end
+
+  def brand_params
+    params.require(:brand).permit(:name, :price_range, :speciality)
   end
 
   def authorize_user! 

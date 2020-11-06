@@ -1,5 +1,5 @@
 <%= render "shared/devisenavbar" %>
-<h1>ALL BRANDS</h1>
+<h1>🌿ALL BRANDS 🌿</h1>
 
 <% @brands.each do |brand|%>
  <div class="brand">
@@ -9,5 +9,4 @@
     <%= image_tag brand.picture, class: "brand-logo" if brand.picture.attached? %>
     <%= link_to "View Profile", brand_path(brand.id)  %>
 <%end %>
-
   </div> 
