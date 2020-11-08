@@ -1,0 +1,13 @@
+<h1>Show Page for Listings</h1>
+
+<h1><%= @lisitng.name %></h1>
+
+ <div class="listing">
+    <p>Name: <%= @listing.name %></p>
+    <p>Price: <%= @listing.price%></p>
+    <p>Listing: <%= @listing.eco_rating %></p>
+    <%= image_tag @listing.picture, class: "listing-image" if @listing.picture.attached? %>
+  </div>
+  <%= link_to "Back", brands_path %> 
+  <%= link_to "Remove Product", listing_path(@listing.id), :method => :delete %>
+  <%= link_to 'Edit Product', edit_listing_path %>
