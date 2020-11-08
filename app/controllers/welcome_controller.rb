@@ -5,5 +5,7 @@ class WelcomeController < ApplicationController
 #   redirect_to 
   
 # end 
+def home
+end 
 
 end 

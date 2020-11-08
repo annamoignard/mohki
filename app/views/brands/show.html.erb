@@ -7,7 +7,9 @@
     <p>Speciality: <%= @brand.speciality %></p>
     <%= image_tag @brand.picture, class: "brand-logo" if @brand.picture.attached? %>
   </div>
-
-  <%= link_to 'Edit Brand Profile', edit_brand_path %>
-  <%= link_to 'Delete Brand Profile', brand_path, :method => :delete %> 
   <%= link_to "Back", brands_path %> 
+  <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete %>
+  <%= link_to 'Edit Brand Profile', edit_brand_path %>
+
+  <%# <% if user_signed_in? && current_user.brand.include?(@brand) %> 
+  <%# <% end %> 
