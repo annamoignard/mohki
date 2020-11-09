@@ -5,8 +5,8 @@
     <% end %>
 
     <p>Name: <%= f.text_area :name %></p>
-    <p>Price Range: <%= f.number_field :price_range %> </p>
-    <p>Speciality: <%= f.text_area :speciality %></p>
+    <p>Average Product Price: $ <%= f.number_field :price_range %> </p>
+    <p>Description: <%= f.text_area :speciality %></p>
     <p>Logo: <%= f.file_field :picture, accept: 'image/png, image/jpg, image/jpeg' %></p>
     <p>Please tick if you meet the requirements: <%= f.check_box :terms_of_service %></p>
     <%= f.submit id: "Get Started!" %>

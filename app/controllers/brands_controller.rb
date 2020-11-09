@@ -1,7 +1,8 @@
 class BrandsController < ApplicationController
-  before_action :authenticate_user! 
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user! 
   before_action :authorize_user!, only: [:edit, :update, :destroy]
+  before_action :check_seller!, only: [:new, :create]
 
   # display all brands, not just the user brand 
   def index
@@ -58,6 +59,12 @@ class BrandsController < ApplicationController
   def authorize_user! 
     unless @brand.user_id == current_user.id
       flash[:not_authorized] = "Not authorized to access this page!!"
+      redirect_to brands_path
+    end 
+  end 
+
+  def check_seller!
+    unless current_user.seller? 
       redirect_to brands_path
     end 
   end 

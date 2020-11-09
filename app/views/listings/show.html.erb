@@ -8,7 +8,14 @@
     <p>Price: $<%= @listing.price%></p>
     <p>Eco Stars: <%= '⭐️' * @listing.eco_rating %></p>
     <%= image_tag @listing.picture, class: "listing-image" if @listing.picture.attached? %>
-  </div>
-  <%= link_to "Back", brands_path %> 
-  <%= link_to "Remove Product", listing_path(@listing.id), :method => :delete %>
-  <%= link_to 'Edit Product', edit_listing_path %>
+
+  <% if @listing.brand == current_user.brand %>
+    <%= link_to "Remove Listing", listing_path(@listing.id), :method => :delete %>
+    <%= link_to 'Edit Listing', edit_brand_path %>
+  <% end %> 
+
+  <%= link_to "Back", listings_path %> 
+
+
+  <%# <%= link_to "Remove Product", listing_path(@listing.id), :method => :delete %>
+  <%# <%= link_to 'Edit Product', edit_listing_path %> 
