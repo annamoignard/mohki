@@ -8,7 +8,23 @@
     <p>Average Product Price: $ <%= f.number_field :price_range %> </p>
     <p>Description: <%= f.text_area :speciality %></p>
     <p>Logo: <%= f.file_field :picture, accept: 'image/png, image/jpg, image/jpeg' %></p>
-    <p>Please tick if you meet the requirements: <%= f.check_box :terms_of_service %></p>
+    <p>Here at Mohki, we want our customers to feel and look their best, without costing the earth 🌎
+    To become a partner with Mohki, your brand must:  
+    <ul>
+      <li>🌱 Be in 100% recylcable packaging </li>
+      <li>🌱 Be 100% free of oxybenzone and octinoxate (these ingredients can damage our coral reefs and prevent their growth!)</li>
+      <li>🌱 Be free of Synthetic fragrances, Siloxanes, parabens and phthalates</li>
+      <li>🌱 Must not test on animals</li>
+      <li>🌱 Have plant-based formulas</li>
+      <li>🌱 Have a carbon-neautral footprint</li>
+      <li>🌱 Use only 100% susstainable ingredients</li>
+    </ul>
+    We understand that it can be difficult to meet these requirements, and so to encourage 
+    brands to be more eco-friendly, if some products from your line meet the above, please tick the box below
+    and we will assist you in listing only those goods on Mohki. 
+    <br>
+    Please tick the box if your brand meets the requirements: 
+    <%= f.check_box :terms_of_service %></p>
     <%= f.submit id: "Get Started!" %>
     <% end %>
 </div>
