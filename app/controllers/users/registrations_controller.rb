@@ -13,11 +13,11 @@ class Users::RegistrationsController < Devise::RegistrationsController
   def create
     super
     if params[:user][:seller] == "Shopper"
-      current_user.seller = false 
-      current_user.save
+      resource.seller = false 
+      resource.save
     elsif params[:user][:seller] == "Seller"
-      current_user.seller = true
-      current_user.save 
+      resource.seller = true
+      resource.save 
     end 
   end
 

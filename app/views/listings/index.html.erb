@@ -1,10 +1,11 @@
+<%= render "shared/devisenavbar" %>
 <h1>Index Page For Listings</h1>
 
 <% @listings.each do |listing|%>
  <div class="listing">
     <p>Name: <%= listing.name %></p>
-    <p>Price: <%= listing.price %></p>
-    <p>Eco Score: <%= listing.eco_score %></p>
+    <p>Price: $ <%= listing.price %></p>
+    <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
     <%= image_tag listing.picture, class: "listing-image" if listing.picture.attached? %>
     <%= link_to "View Product", listing_path(listing.id)  %>
 <%end %>

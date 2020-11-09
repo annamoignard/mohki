@@ -17,12 +17,17 @@ class BrandsController < ApplicationController
   end
 
   def create
-    brand = Brand.new(name: params[:brand][:name], price_range: params[:brand][:price_range], speciality: params[:brand][:speciality])
-    brand.save
-    brand.picture.attach(params[:brand][:picture])
+    @brand = Brand.new(brand_params)
+    @brand.picture.attach(params[:brand][:picture])
+    @brand.user = current_user
+    if @brand.save 
     # assiging a new instance of a brand to the has_one relationship
-    current_user.brand = brand #setting up relationship between brand and the user, and giving the brand a user id
-    redirect_to brand_path(brand.id) #so they can view the brand that they created
+    # current_user.brand = @brand #setting up relationship between brand and the user, and giving the brand a user id
+    # current_user.save
+    redirect_to brand_path(@brand.id) #so they can view the brand that they created
+    else  
+      render :new 
+    end
   end
 
   def edit
@@ -47,10 +52,14 @@ class BrandsController < ApplicationController
   end
 
   def brand_params
-    params.require(:brand).permit(:name, :price_range, :speciality)
+    params.require(:brand).permit(:name, :price_range, :speciality, :terms_of_service)
   end
 
   def authorize_user! 
-    @brand.user_id == current_user.id
+    unless @brand.user_id == current_user.id
+      flash[:not_authorized] = "Not authorized to access this page!!"
+      redirect_to brands_path
+    end 
   end 
+
 end

@@ -1,8 +1,8 @@
 <div>
     <%= form_with model: @listing, local: true do |f| %>
     <p>Name: <%= f.text_area :name %></p>
-    <p>Price: <%= f.number_field :prce %> </p>
-    <p>Eco Score: <%= f.text_area :eco_score %></p>
+    <p>Price: <%= f.number_field :price %> </p>
+    <p>Eco Score: <%= f.number_field :eco_rating %></p>
     <p>Product Image: <%= f.file_field :picture, accept: 'image/png, image/jpg, image/jpeg' %></p>
       <%= f.submit id: "Post!" %>
     <% end %>

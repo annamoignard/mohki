@@ -1,10 +1,11 @@
 <%= render "shared/devisenavbar" %>
 <h1>🌿ALL BRANDS 🌿</h1>
+<%= flash[:not_authorized] %>
 
 <% @brands.each do |brand|%>
  <div class="brand">
     <p>Name: <%= brand.name %></p>
-    <p>Price Range: <%= brand.price_range %></p>
+    <p>Price Range: <%= price_visual(brand.price_range) %></p>
     <p>Speciality: <%= brand.speciality %></p>
     <%= image_tag brand.picture, class: "brand-logo" if brand.picture.attached? %>
     <%= link_to "View Profile", brand_path(brand.id)  %>
