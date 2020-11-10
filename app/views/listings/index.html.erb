@@ -1,6 +1,8 @@
 <%= render "shared/devisenavbar" %>
 <h1>Index Page For Listings</h1>
 
+<p><%= render "shared/listingsearchform" %></p>
+
 <% @listings.each do |listing|%>
  <div class="listing">
     <p>Name: <%= listing.name %></p>
@@ -9,4 +11,4 @@
     <%= image_tag listing.picture, class: "listing-image" if listing.picture.attached? %>
     <%= link_to "View Product", listing_path(listing.id)  %>
   </div> 
-<%end %>
+<%end %> 

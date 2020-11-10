@@ -42,8 +42,9 @@ class BrandsController < ApplicationController
   end
 
   def update
-    @brand.update(name: params[:brand][:name], price_range: params[:brand][:price_range], speciality: params[:brand][:speciality])
-    redirect_to brand_path(brand.id)
+    @brand.update(brand_params)
+    # @brand.update(name: params[:brand][:name], price_range: params[:brand][:price_range], speciality: params[:brand][:speciality])
+    redirect_to brand_path(@brand.id)
   end
 
   def destroy
@@ -60,7 +61,7 @@ class BrandsController < ApplicationController
   end
 
   def brand_params
-    params.require(:brand).permit(:name, :price_range, :speciality, :terms_of_service)
+    params.require(:brand).permit(:name, :price_range, :speciality, :picture, :terms_of_service)
   end
 
   def authorize_user! 

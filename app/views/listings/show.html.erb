@@ -11,7 +11,7 @@
 
   <% if @listing.brand == current_user.brand %>
     <%= link_to "Remove Listing", listing_path(@listing.id), :method => :delete %>
-    <%= link_to 'Edit Listing', edit_brand_path %>
+    <%= link_to 'Edit Listing', edit_listing_path %>
   <% end %> 
 
   <%= link_to "Back", listings_path %> 

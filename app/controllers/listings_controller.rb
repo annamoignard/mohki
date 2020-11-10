@@ -4,9 +4,14 @@ class ListingsController < ApplicationController
   before_action :check_seller!, only: [:new, :create]
   before_action :authorize_user!, only: [:edit, :update, :destroy]
 
-  def index
-    @listings = Listing.all
+    def index
+      if params[:search].present?
+        @listings = Listing.search_by(search_params)
+      else 
+        @listings = Listing.all
+      end 
   end
+
   
   def show 
   end 
@@ -18,7 +23,7 @@ class ListingsController < ApplicationController
   def create
     # is this not working coz it is meant to associate with brand? 
     brand = current_user.brand 
-    listing = brand.listings.new(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating])
+    listing = brand.listings.new(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category])
     listing.save
     listing.picture.attach(params[:listing][:picture])
     redirect_to listing_path(listing.id) 
@@ -29,8 +34,8 @@ class ListingsController < ApplicationController
   end
 
   def update
-    @listing.update(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating])
-    redirect_to listing_path(listing.id)
+    @listing.update(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category])
+    redirect_to listing_path(@listing.id)
   end
 
   def destroy
@@ -47,7 +52,7 @@ class ListingsController < ApplicationController
   end
 
   def listing_params
-    params.require(:listings).permit(:name, :price, :eco_rating)
+    params.require(:listings).permit(:name, :price, :eco_rating, :category)
   end
 
   def authorize_user! 
@@ -64,6 +69,10 @@ class ListingsController < ApplicationController
     unless current_user.seller? 
       redirect_to listings_path
     end 
+  end 
+
+  def search_params
+    params.require(:search).permit(:listing)
   end 
 
 end

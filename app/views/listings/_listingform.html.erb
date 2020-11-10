@@ -3,7 +3,8 @@
     <p>Name: <%= f.text_area :name %></p>
     <p>Price: $ <%= f.number_field :price %> </p>
     <p>Eco Score: (1 - 5) <%= f.number_field :eco_rating %></p>
+    <p>Cetegory:  <%= f.select :category, options_for_select(Listing.categories.keys) %> 
     <p>Product Image: <%= f.file_field :picture, accept: 'image/png, image/jpg, image/jpeg' %></p>
       <%= f.submit id: "Post!" %>
     <% end %>
-</div>
+</div> 

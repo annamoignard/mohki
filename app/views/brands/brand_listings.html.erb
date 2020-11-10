@@ -1,19 +1,13 @@
 <%= render "shared/devisenavbar" %>
 <h1><%= @brand.name %></h1>
-
- <div class="brand">
-    <p>Name: <%= @brand.name %></p>
-    <p>Price Range: <%= price_visual(@brand.price_range) %></p>
-    <p>Description: <%= @brand.speciality %></p>
-    <%= image_tag @brand.picture, class: "brand-logo" if @brand.picture.attached? %>
-  </div>
-  <%= link_to "Back", brands_path %> 
+ 
 
   <% if user_signed_in? && current_user.brand == @brand %> 
     <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete %>
     <%= link_to 'Edit Brand Profile', edit_brand_path %>
   <% end %> 
 
+<h2>Products</h2>
 <% @brand.listings.each do |listing| %> 
 <div class="listing">
     <p>Name: <%= listing.name %></p>
@@ -23,3 +17,4 @@
     <%= link_to "View Product", listing_path(listing.id)  %>
   </div> 
 <%end %>
+<%= link_to "Back", brands_path %> 

@@ -1,0 +1,11 @@
+<%= form_with(scope: :search, url: listings_path, method: 'get', local: true) do |f| %>
+  <%= f.label :listing %>
+  <%= f.text_field :listing %>
+  <%= f.submit 'Search' %>
+<% end %>   
+
+<%= form_with(scope: :search, url: listings_path, method: 'get', local: true) do |f| %>
+  <%= f.label :category %>
+  <%= f.select :category, ['Body Care', 'Hair Care', 'Skincare', 'Make-Up', 'Luxury'] %>
+  <%= f.submit 'Search' %>
+<% end %> 
