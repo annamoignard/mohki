@@ -1,15 +1,22 @@
 class BrandsController < ApplicationController
-  before_action :set_brand, only: [:show, :edit, :update, :destroy]
+  before_action :set_brand, only: [:show, :edit, :update, :destroy, :brand_listings]
   before_action :authenticate_user! 
   before_action :authorize_user!, only: [:edit, :update, :destroy]
   before_action :check_seller!, only: [:new, :create]
-
+  
   # display all brands, not just the user brand 
   def index
-    @brands = Brand.all
+      if params[:search].present?
+        @brands = Brand.search_by(search_params)
+      else 
+        @brands = Brand.all
+      end 
   end
   
   def show 
+  end 
+
+  def brand_listings
   end 
 
   def new
@@ -67,6 +74,10 @@ class BrandsController < ApplicationController
     unless current_user.seller? 
       redirect_to brands_path
     end 
+  end 
+
+  def search_params
+    params.require(:search).permit(:brand)
   end 
 
 end

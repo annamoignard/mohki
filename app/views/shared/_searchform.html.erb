@@ -1,0 +1,6 @@
+<%= form_with(scope: :search, url: brands_path, method: 'get', local: true) do |f| %>
+  <%= f.label :brand %>
+  <%= f.text_field :brand %>
+  <%= f.submit 'Search' %>
+<% end %> 
+

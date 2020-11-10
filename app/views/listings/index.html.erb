@@ -8,5 +8,5 @@
     <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
     <%= image_tag listing.picture, class: "listing-image" if listing.picture.attached? %>
     <%= link_to "View Product", listing_path(listing.id)  %>
-<%end %>
   </div> 
+<%end %>

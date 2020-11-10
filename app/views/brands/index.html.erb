@@ -2,6 +2,8 @@
 <h1>🌿ALL BRANDS 🌿</h1>
 <%= flash[:not_authorized] %>
 
+<p><%= render "shared/searchform" %></p>
+
 <% @brands.each do |brand|%>
  <div class="brand">
     <p>Name: <%= brand.name %></p>
@@ -11,3 +13,5 @@
     <%= link_to "View Profile", brand_path(brand.id)  %>
 <%end %>
   </div> 
+
+  
