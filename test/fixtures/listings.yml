@@ -1,0 +1,222 @@
+---
+Listing_1:
+  id: 1
+  name: Coco Body Butter
+  brand_id: 1
+  price: 70
+  eco_rating: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 04:59:51.969126000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 04:59:52.000361000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_2:
+  id: 2
+  name: Hydra Infuse Serum
+  brand_id: 2
+  price: 60
+  eco_rating: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:05:48.065534000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:05:48.087018000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_3:
+  id: 3
+  name: 'Double Trouble '
+  brand_id: 3
+  price: 160
+  eco_rating: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:16:35.038385000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:16:35.065207000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_4:
+  id: 4
+  name: Strawberries & Cream Toner
+  brand_id: 4
+  price: 25
+  eco_rating: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:19:55.171294000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:43:34.691126000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_5:
+  id: 5
+  name: Total Body Care Package
+  brand_id: 5
+  price: 150
+  eco_rating: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:25:26.840564000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:25:26.863026000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_6:
+  id: 6
+  name: Beauty Elixer
+  brand_id: 6
+  price: 55
+  eco_rating: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:29:57.935984000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:29:57.958165000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_7:
+  id: 7
+  name: Cherry Blossom Oil
+  brand_id: 7
+  price: 100
+  eco_rating: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:33:42.344702000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:34:20.718761000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_8:
+  id: 8
+  name: Argan Oil
+  brand_id: 8
+  price: 65
+  eco_rating: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:42:11.314674000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:42:11.348949000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_9:
+  id: 10
+  name: Lemonade Fizz
+  brand_id: 11
+  price: 49
+  eco_rating: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 06:01:18.580884000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 06:01:18.603891000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_10:
+  id: 11
+  name: Coco Butter Lipstick
+  brand_id: 10
+  price: 70
+  eco_rating: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 06:06:00.581800000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 06:06:00.613865000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_11:
+  id: 12
+  name: Peach Scrub
+  brand_id: 12
+  price: 35
+  eco_rating: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 06:17:01.741317000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 06:17:01.768966000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_12:
+  id: 13
+  name: Blackcurrent Travel Set
+  brand_id: 13
+  price: 60
+  eco_rating: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 06:50:52.141877000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 06:50:52.167517000 Z
+    zone: *2
+    time: *3
+
+---
+Listing_13:
+  id: 19
+  name: Glow test
+  brand_id: 13
+  price: 60
+  eco_rating: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-11 04:53:55.459952000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-11 04:53:55.555327000 Z
+    zone: *2
+    time: *3
+  category: Body Care
+

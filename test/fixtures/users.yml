@@ -1,0 +1,252 @@
+---
+User_1:
+  id: 1
+  email: hello@gmail.com
+  encrypted_password: "$2a$12$lSIz6DEM7Ra8phrC.wPULe7jkyeVPPWjPV63hXjcgtFhU707pEcFq"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 04:56:58.087235000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 04:56:58.087235000 Z
+    zone: *2
+    time: *3
+  seller: true
+
+---
+User_2:
+  id: 2
+  email: hellobye@gmail.com
+  encrypted_password: "$2a$12$vVCaRJVAa0xEWJ0wUJCdfu7rMnRJzNdWbMmaW/ZGzTCXTg.K4X0ha"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 04:56:58.335289000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 04:56:58.335289000 Z
+    zone: *2
+    time: *3
+
+---
+User_3:
+  id: 3
+  email: ecoglotest@gmail.com
+  encrypted_password: "$2a$12$W9V.QR.KwUS42nC7SW6smeqv3dq1xgbvpMf0oW.gJ8xO4dNUk8lbq"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 04:58:01.489796000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 04:58:01.500950000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Eco Glo
+
+---
+User_4:
+  id: 4
+  email: hydratest@gmail.com
+  encrypted_password: "$2a$12$Up2JYOZOSa5DfDxaxCmVqukLT/i6Vzldv.G5blkBqhC1xGtd5p492"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:01:02.260388000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:01:02.266203000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Hydra
+
+---
+User_5:
+  id: 5
+  email: waltertest@gmail.com
+  encrypted_password: "$2a$12$4MQjm/uSAUxrtNdsk5fhBe6YgiCYzhCUDU3bkh5RCrKS/cuCBObny"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:06:39.961426000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:06:39.967492000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Walter
+
+---
+User_6:
+  id: 6
+  email: flossytest@gmail.com
+  encrypted_password: "$2a$12$quX71BdDR/XcdRwf.1xxfuSfuJUxSRxL3mDtNKoZcM7Qw3cq/cD/C"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:17:28.205773000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:17:28.212650000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Flossy
+
+---
+User_7:
+  id: 7
+  email: earthdream@gmail.com
+  encrypted_password: "$2a$12$Xtoa9A/bxwMjXwTfOgdVZOmMalj.uMUVY4WlLLSst3N04cGq01Uy2"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:21:58.929362000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:21:58.941275000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Earth Dream
+
+---
+User_8:
+  id: 8
+  email: byronglowco@gmail.com
+  encrypted_password: "$2a$12$mWeqNRvwp/gTmkZ4MYt8q.KQp0j7Hjl8vCnmWbRZ.zqL5AiyAUTOS"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:27:39.847625000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:27:39.854349000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: ByronGlowCo
+
+---
+User_9:
+  id: 9
+  email: shantitest@gmail.com
+  encrypted_password: "$2a$12$2lgYDWf/FFjednlWFZYRZORZ0t09VpIHtYKzy8pJ.5O1aFWumr/La"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:31:18.328654000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:31:18.335430000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Shanti
+
+---
+User_10:
+  id: 10
+  email: organicotest@gmail.com
+  encrypted_password: "$2a$12$nw7OCSVLOcme3hW8FDhtfubbbnPS9C1hDCnjzoDmHZ0KOZDtehIei"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:35:13.201245000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:35:13.205431000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Organico
+
+---
+User_11:
+  id: 11
+  email: glowbaby@gmail.com
+  encrypted_password: "$2a$12$WSSvJhpnSDnNb.YLzV.i.ubMqIAIgV4WShyt/E2gy5aCyc8yL4wg2"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:44:21.437081000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:44:21.443364000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Glow Baby
+
+---
+User_12:
+  id: 12
+  email: beau@gmail.com
+  encrypted_password: "$2a$12$ONX5k3XsMJCCe4KQHElxz.U.QxgawDcvzH2dSKC1dlw34nUtiPoKK"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:49:02.507749000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:49:02.513212000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Beau
+
+---
+User_13:
+  id: 13
+  email: ozzi@gmai.com
+  encrypted_password: "$2a$12$QZg908bwj7zph97uh1s6BuEK5QlOXf4pTwbuJn0O02SrGG.i1ftta"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:52:53.092471000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:52:53.098776000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: ozzi
+
+---
+User_14:
+  id: 14
+  email: peachybeauty@gmail.com
+  encrypted_password: "$2a$12$dIAs/BGp8nFFrhtpNdJrheLlaiBWGatFT03gNwf5qF1z8SF2225he"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 06:08:35.176972000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 06:08:35.183597000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Peachy Beauty
+
+---
+User_15:
+  id: 15
+  email: bluebeauty@gmail.com
+  encrypted_password: "$2a$12$3D/3S/e/y14Vc5YXgt168ONE1ybCELZAY1wVHOuxN5VwzYJ1w4qWK"
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 06:17:49.258836000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 06:17:49.265178000 Z
+    zone: *2
+    time: *3
+  seller: true
+  username: Blue Beauty
+

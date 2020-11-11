@@ -1,4 +1,6 @@
 <%# addd logic DONT make new nav bar %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+ <div class="collapse navbar-collapse" id="navbarSupportedContent">
 <ul class="nav nav-pills">
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
@@ -11,3 +13,11 @@
   <%= link_to "All Products", listings_path, class: "dropdown-item" %>
   <%= link_to "Sign Out", destroy_user_session_path, method: "delete", class: "dropdown-item" %>
 </ul>
+<%= form_with scope: :search, url: searches_path, method: 'get', local: true, html: {class:"form-inline my-2 my-lg-0" } do |f| %>
+  <%= f.text_field :search, class: "form-control mr-sm-2", type: "search", placeholder: "Search", 'aria-label': "Search" %>
+  <%= f.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0"%>
+  <% end %>
+  </div>
+</nav>
+
+

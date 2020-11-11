@@ -1,0 +1,11 @@
+<%= render 'shared/devisenavbar'%>
+<h1>brands</h1>
+<%  @brands.each do |brand| %>
+<p><%= brand.name%></p>
+<% end %>
+
+<h1>Listings</h1>
+<% @listings.each do |listing| %>
+<p><%= listing.name%></p>
+<% end %>
+

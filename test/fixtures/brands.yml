@@ -1,0 +1,237 @@
+---
+Brand_1:
+  id: 1
+  name: Eco Glo
+  price_range: 65
+  speciality: 'We create beautiful body-care products, full of locally and ethically
+    sourced ingredients. '
+  user_id: 3
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 04:58:52.037107000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 04:58:52.115281000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_2:
+  id: 2
+  name: Hydra
+  price_range: 90
+  speciality: We infuse each and every product with our signature infusion of coconut
+    water and water melon extract. All our packaging is biodegradable!
+  user_id: 4
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:04:21.518979000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:04:21.538529000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_3:
+  id: 3
+  name: Walter
+  price_range: 200
+  speciality: 'We create organic, curated skincare for all skin types + 100% fragrance
+    free. '
+  user_id: 5
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:07:55.398950000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:07:55.419126000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_4:
+  id: 4
+  name: Flossy
+  price_range: 30
+  speciality: Our beauty line is totally carbon neutral, and our products smell like
+    berries and cream! We want you to be IN LOVE with yourself, day in and day out!
+  user_id: 6
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:19:09.720452000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:19:09.741095000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_5:
+  id: 5
+  name: Earth Dream
+  price_range: 80
+  speciality: Earth Dream provides natural, organic skincare for your whole family.
+    Our products are 100% paraben, siloxanes and fragrance free.
+  user_id: 7
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:24:22.533867000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:24:22.555326000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_6:
+  id: 6
+  name: Byron Glow Co
+  price_range: 30
+  speciality: We are a family business located in the heart of Byron Bay! Our ingredients
+    are 100% locally sourced in Australia, and smell like summertime!
+  user_id: 8
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:29:06.850786000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:29:06.868672000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_7:
+  id: 7
+  name: Shanti
+  price_range: 95
+  speciality: Shanti believes in peace, love and yoga! Feel a sense of instant joy
+    and serenity wash over when you use our signature face oils!
+  user_id: 9
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:32:56.514318000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:32:56.534142000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_8:
+  id: 8
+  name: Organico
+  price_range: 50
+  speciality: 'Glow with Organico! Our brand is formulated with 100% ethically sourced
+    argan oil, bio-dynamic honey and coconut cream. '
+  user_id: 10
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:37:37.867411000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:37:37.892140000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_9:
+  id: 9
+  name: Glow Baby
+  price_range: 40
+  speciality: Get your glow on with Glow Baby! Our make-up line is 100% vegan, cruelty
+    free and bio-degradable! We believe in enhancing your natural self, showing off
+    your unique beauty!
+  user_id: 11
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:47:06.285280000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:47:06.306845000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_10:
+  id: 10
+  name: Beau
+  price_range: 250
+  speciality: Beau was born in Melbourne in 2000. We create luxury skincare and makeup
+    for men and women without damaging the planet. With every purchase, we will donate
+    20% to rain forrest conservation.
+  user_id: 12
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:51:52.902864000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:51:52.921850000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_11:
+  id: 11
+  name: Ozzi
+  price_range: 25
+  speciality: Ozzi make delicious body care infused with black current enzyme and
+    almond oil. If you send back your empty jars to be properly recycled, we'll send
+    you free samples!
+  user_id: 13
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 05:54:58.263445000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 05:54:58.284160000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_12:
+  id: 12
+  name: Peachy Beauty
+  price_range: 50
+  speciality: Peachy Beauty create the yummiest range of beauty products going round!
+    Infused with peach extract, your skin will glow for days!
+  user_id: 14
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 06:10:42.187043000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 06:10:42.208180000 Z
+    zone: *2
+    time: *3
+
+---
+Brand_13:
+  id: 13
+  name: Blue Beauty
+  price_range: 55
+  speciality: We love beauty, but we also love planet Earth. Blue will create unique
+    products  that look gorgeous, smell delightful and improve our environment!
+  user_id: 15
+  created_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &1 2020-11-10 06:32:46.936356000 Z
+    zone: &2 !ruby/object:ActiveSupport::TimeZone
+      name: Etc/UTC
+    time: *1
+  updated_at: !ruby/object:ActiveSupport::TimeWithZone
+    utc: &3 2020-11-10 06:49:28.039051000 Z
+    zone: *2
+    time: *3
+

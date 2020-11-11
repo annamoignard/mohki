@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   resources :brands
   get '/brands/:id/listings', to: 'brands#brand_listings', as: 'brand_listings'
   resources :listings 
+  resources :searches, only: [:index]
   root to: "welcome#home"
 end

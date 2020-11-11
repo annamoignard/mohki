@@ -2,8 +2,6 @@
 <h1>🌿ALL BRANDS 🌿</h1>
 <%= flash[:not_authorized] %>
 
-<p><%= render "shared/brandsearchform" %></p>
-
 <% @brands.each do |brand|%>
   <div class="card" style="width: 18rem;">
   <%= image_tag brand.picture, class: "card-img-top" if brand.picture.attached? %>
