@@ -1,8 +1,5 @@
 <%# addd logic DONT make new nav bar %>
 <ul class="nav nav-pills">
-  <li class="nav-item">
-    <a class="nav-link active" href="#">Active</a>
-  </li>
   <li class="nav-item dropdown">
     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
     <div class="dropdown-menu">
@@ -13,14 +10,4 @@
   <%= link_to "New Product", new_listing_path, class: "dropdown-item" %>
   <%= link_to "All Products", listings_path, class: "dropdown-item" %>
   <%= link_to "Sign Out", destroy_user_session_path, method: "delete", class: "dropdown-item" %>
-      <div class="dropdown-divider"></div>
-      <a class="dropdown-item" href="#">Separated link</a>
-    </div>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-  </li>
 </ul>

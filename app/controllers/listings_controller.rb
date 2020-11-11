@@ -72,7 +72,7 @@ class ListingsController < ApplicationController
   end 
 
   def search_params
-    params.require(:search).permit(:listing)
+    params.require(:search).permit(:listing, :category)
   end 
 
 end

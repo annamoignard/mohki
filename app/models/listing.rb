@@ -13,7 +13,7 @@ class Listing < ApplicationRecord
   has_one_attached :picture
 
 
-  scope :search_by_category, -> (category) { Listing.where("category", listing)}
-
+  scope :search_by_category, -> (category) { Listing.where(category: category)}
   scope :search_by_listing, -> (listing) { Listing.where('listings.name ILIKE ?', "%#{listing}%") }
+  
 end
