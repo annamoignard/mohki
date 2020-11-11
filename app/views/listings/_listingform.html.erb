@@ -1,6 +1,7 @@
 <div>
     <%= form_with model: @listing, local: true do |f| %>
     <p>Name: <%= f.text_area :name %></p>
+    <p>Description: <%= f.text_area :description %></p>
     <p>Price: $ <%= f.number_field :price %> </p>
     <p>Eco Score: (1 - 5) <%= f.number_field :eco_rating %></p>
     <p>Cetegory:  <%= f.select :category, options_for_select(Listing.categories.keys) %> 

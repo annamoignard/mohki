@@ -23,7 +23,7 @@ class ListingsController < ApplicationController
   def create
     # is this not working coz it is meant to associate with brand? 
     brand = current_user.brand 
-    listing = brand.listings.new(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category])
+    listing = brand.listings.new(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category], description: params[:listing][:description])
     listing.save
     listing.picture.attach(params[:listing][:picture])
     redirect_to listing_path(listing.id) 
@@ -34,7 +34,7 @@ class ListingsController < ApplicationController
   end
 
   def update
-    @listing.update(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category])
+    @listing.update(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category], description: params[:listing][:description])
     redirect_to listing_path(@listing.id)
   end
 
@@ -52,7 +52,7 @@ class ListingsController < ApplicationController
   end
 
   def listing_params
-    params.require(:listings).permit(:name, :price, :eco_rating, :category)
+    params.require(:listings).permit(:name, :price, :eco_rating, :category, :description)
   end
 
   def authorize_user! 
