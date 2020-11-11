@@ -11,9 +11,10 @@ class Listing < ApplicationRecord
 
   belongs_to :brand
   has_one_attached :picture
+  
 
 
   scope :search_by_category, -> (category) { Listing.where(category: category)}
   scope :search_by_listing, -> (listing) { Listing.where('listings.name ILIKE ?', "%#{listing}%") }
-  
+
 end
