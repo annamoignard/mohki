@@ -2,16 +2,22 @@
 <h1>🌿ALL BRANDS 🌿</h1>
 <%= flash[:not_authorized] %>
 
-<% @brands.each do |brand|%>
-  <div class="card" style="width: 18rem;">
-  <%= image_tag brand.picture, class: "card-img-top" if brand.picture.attached? %>
-  <div class= "card-body">
-  <p> <%= brand.name %></p>
-  <p> <%= brand.speciality %></p>
+<div class="row">
+  <div class="col-sm-6">
+  <% @brands.each do |brand|%>
+    <div class="card">
+      <div class="card-body">
+        <div class="card" style="width: 18rem;">
+          <%= image_tag brand.picture, class: "card-img-top" if brand.picture.attached? %>
+          <div class= "card-body">
+            <p> <%= brand.name %></p>
+            <p> <%= brand.speciality %></p>
+          </div>
+          <div class="card-body">
+            <%= link_to "View Profile", brand_path(brand.id)  %>
+          </div>
+        </div>
+      </div>
+    <% end %>
   </div>
-  <div class="card-body">
-    <%= link_to "View Profile", brand_path(brand.id)  %>
-  </div>
-  <% end %>
-</div>
-
+</div> 
