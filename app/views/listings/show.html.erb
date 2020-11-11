@@ -15,6 +15,7 @@
   <% end %> 
 
   <%= link_to "Back", listings_path %> 
+  <%= link_to "View Brand", brand_path(@listing.brand.id)  %>
 
 
   <%# <%= link_to "Remove Product", listing_path(@listing.id), :method => :delete %>
