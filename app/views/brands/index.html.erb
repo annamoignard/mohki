@@ -5,12 +5,15 @@
 <p><%= render "shared/brandsearchform" %></p>
 
 <% @brands.each do |brand|%>
- <div class="brand">
-    <p>Name: <%= brand.name %></p>
-    <p>Price Range: <%= price_visual(brand.price_range) %></p>
-    <p>Description: <%= brand.speciality %></p>
-    <%= image_tag brand.picture, class: "brand-logo" if brand.picture.attached? %>
+  <div class="card" style="width: 18rem;">
+  <%= image_tag brand.picture, class: "card-img-top" if brand.picture.attached? %>
+  <div class= "card-body">
+  <p> <%= brand.name %></p>
+  <p> <%= brand.speciality %></p>
+  </div>
+  <div class="card-body">
     <%= link_to "View Profile", brand_path(brand.id)  %>
-<%end %>
-  </div> 
+  </div>
+  <% end %>
+</div>
 
