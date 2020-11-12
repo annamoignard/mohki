@@ -1,19 +1,31 @@
 <div>
     <%= form_with model: @brand, local: true do |f| %>
     <% if @brand.errors.any? %>
-    <%= @brand.errors.full_messages %> 
+      <%= @brand.errors.full_messages %> 
     <% end %>
 
-    <p>Name: <%= f.text_area :name %></p>
+    <div class="form-group">
+    <p>Name: <%= f.text_area :name, class: 'form-control', placeholder: 'Name'%></p>
+    </div>
+
+    <div class="form-group">
     <p>Average Product Price: $ <%= f.number_field :price_range %> </p>
-    <p>Description: <%= f.text_area :speciality %></p>
+    </div>
+
+    <div class="form-group">
+    <p>Description: <%= f.text_area :speciality, class: 'form-control', placeholder: 'Description' %></p>
+    </div>
+    
+    <div class="form-group">
     <p>Logo: <%= f.file_field :picture, accept: 'image/png, image/jpg, image/jpeg' %></p>
+    </div>
+
     <p>Here at Mohki, we want our customers to feel and look their best, without costing the earth 🌎
     To become a partner with Mohki, your brand must:  
     <ul>
       <li>🌱 Be in 100% recylcable packaging </li>
       <li>🌱 Be 100% free of oxybenzone and octinoxate (these ingredients can damage our coral reefs and prevent their growth!)</li>
-      <li>🌱 Be free of Synthetic fragrances, Siloxanes, parabens and phthalates</li>
+      <li>🌱 Be free of synthetic fragrances, siloxanes, parabens and phthalates</li>
       <li>🌱 Must not test on animals</li>
       <li>🌱 Have plant-based formulas</li>
       <li>🌱 Have a carbon-neautral footprint</li>
@@ -24,8 +36,10 @@
     and we will assist you in listing only those goods on Mohki. 
     <br>
     Please tick the box if your brand meets the requirements: 
+
     <%= f.check_box :terms_of_service %></p>
-    <%= f.submit id: "Get Started!" %>
+  
+    <%= f.submit id: "Get Started!", class: "btn btn-primary" %>
     <% end %>
 </div>
 
