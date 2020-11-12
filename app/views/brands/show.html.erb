@@ -2,15 +2,6 @@
 <h1><%= @brand.name %></h1>
 
 
-  <%#  these go outside of div for bootstrap %>
-  <%= link_to "Back", brands_path %> 
-  <%= link_to "View Products", brand_listings_path %> 
-
-  <% if user_signed_in? && current_user.brand == @brand %> 
-    <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete %>
-    <%= link_to 'Edit Brand Profile', edit_brand_path %>
-  <% end %> 
-<%#  and above  %>
 
 <div class="card" style="width: 18rem;">
     <%= image_tag @brand.picture, class: "card-img-top" if @brand.picture.attached? %>
@@ -24,4 +15,40 @@
   <%= link_to "Back", brands_path %> 
   <%= link_to "View Products", brand_listings_path %> 
   </div>
+</div> 
+
+
+<!--Modals for Edit/delete If user is signed in and made the brand -->
+  <% if user_signed_in? && current_user.brand == @brand %> 
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+  Update Details
+</button>
+<!-- Modal for Edit -->
+<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <%= render 'brandform', brand: @brand %>
+      </div>
+    </div>
+  </div>
 </div>
+<!-- Button trigger modal For DELETE-->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+  Delete Brand
+</button>
+
+<!-- Actual Modal Bootstrap Stuff -->
+
+      <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete %>
+
+<% end %> 
+
+

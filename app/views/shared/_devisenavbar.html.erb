@@ -11,6 +11,7 @@
   <%= link_to "All Brands", brands_path, class: "dropdown-item" %>
   <%= link_to "New Product", new_listing_path, class: "dropdown-item" %>
   <%= link_to "All Products", listings_path, class: "dropdown-item" %>
+  <%= link_to "View Faves", likes_path, class: "dropdown-item" %>
   <%= link_to "Sign Out", destroy_user_session_path, method: "delete", class: "dropdown-item" %>
 </ul>
 <%= form_with scope: :search, url: searches_path, method: 'get', local: true, html: {class:"form-inline my-2 my-lg-0" } do |f| %>

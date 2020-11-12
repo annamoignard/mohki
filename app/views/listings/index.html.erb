@@ -10,6 +10,11 @@
     <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
     <%= link_to "View Product", listing_path(listing.id), class: "btn btn-primary"%>
+    <% if current_user.likes.pluck(:listing_id).include?(listing.id) %>
+    <p> Liked! </p>
+    <% else %>
+    <%= link_to "Favourite", listing_likes_path(listing.id), method: :post, class: "btn btn-primary" %>
+    <% end %>  
   </div>
 </div>
 <%end %> 
