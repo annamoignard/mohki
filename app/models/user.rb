@@ -5,5 +5,6 @@ class User < ApplicationRecord
         :recoverable, :rememberable, :validatable
   has_one :brand
   has_many :likes
+  has_many :liked_listings, through: :likes, class_name: "Listing", source: :listing
   # validates_associated :brand 
 end

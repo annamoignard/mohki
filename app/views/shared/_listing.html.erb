@@ -1,0 +1,19 @@
+
+<div class="col-sm-4 my-2">
+    <div class="card h-100" style="width: 18rem;" >
+      <%= image_tag listing.picture, class: "card-img-top" if listing.picture.attached? %>
+      <div class= "card-body" >
+        <p><%= listing.name%></p>
+        <p>$ <%= listing.price %></p>
+        <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
+    </div>
+    <div class="card-body">
+    <%= link_to "View Product", listing_path(listing.id)  %>
+    <% if current_user.likes.pluck(:listing_id).include?(listing.id) %>
+    <%= link_to 'Unfave', unlike_path(listing.id), method: :delete %>
+    <% else %>
+    <%= link_to '❤️', listing_likes_path(listing.id), method: :post %>
+    <% end %> 
+  </div>
+    </div>
+</div>

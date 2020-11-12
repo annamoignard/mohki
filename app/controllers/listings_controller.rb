@@ -4,13 +4,13 @@ class ListingsController < ApplicationController
   before_action :check_seller!, only: [:new, :create]
   before_action :authorize_user!, only: [:edit, :update, :destroy]
 
-    def index
-      if params[:search].present?
-        @listings = Listing.search_by(search_params)
-      else 
-        @listings = Listing.all
-      end 
-  end
+def index
+  if params[:search].present?
+    @listings = Listing.search_by(search_params)
+  else 
+    @listings = Listing.all
+  end 
+end
 
   
   def show 

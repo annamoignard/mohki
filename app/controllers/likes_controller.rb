@@ -3,7 +3,7 @@ class LikesController < ApplicationController
   before_action :find_like, only: [:destroy]
 
   def index
-    @likes = Like.where(user_id: current_user.id)
+    @listings = current_user.liked_listings
   end 
 
   def create
@@ -12,11 +12,7 @@ class LikesController < ApplicationController
   end
 
   def destroy
-    # if !(already_liked?)
-    #   flash[:notice] = "Cannot unlike"
-    # else
-      @like.destroy
-    # end
+    @like.destroy
     redirect_to listings_path
   end
 
@@ -27,13 +23,9 @@ class LikesController < ApplicationController
   end
 
   def find_like
-    @like = @listing.likes.find(params[:id])
+    @like = Like.where(user_id: current_user.id, listing_id: params[:id]).first 
   end
 
-  # def already_liked?
-  #   Like.where(user_id: current_user.id, listing_id:
-  #   params[:listing_id]).exists?
-  # end
 
 end
 
