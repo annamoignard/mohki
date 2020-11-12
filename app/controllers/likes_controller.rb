@@ -1,5 +1,6 @@
 class LikesController < ApplicationController
   before_action :find_listing, only: [:create]
+  before_action :find_like, only: [:destroy]
 
   def index
     @likes = Like.where(user_id: current_user.id)
@@ -10,11 +11,29 @@ class LikesController < ApplicationController
     redirect_to listings_path 
   end
 
+  def destroy
+    # if !(already_liked?)
+    #   flash[:notice] = "Cannot unlike"
+    # else
+      @like.destroy
+    # end
+    redirect_to listings_path
+  end
+
   private
 
   def find_listing
     @listing = Listing.find(params[:listing_id])
   end
+
+  def find_like
+    @like = @listing.likes.find(params[:id])
+  end
+
+  # def already_liked?
+  #   Like.where(user_id: current_user.id, listing_id:
+  #   params[:listing_id]).exists?
+  # end
 
 end
 

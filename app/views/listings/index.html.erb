@@ -1,20 +1,26 @@
 <%= render "shared/devisenavbar" %>
 <h1>Index Page For Listings</h1>
 
-<% @listings.each do |listing|%>
-<div class="card" style="width: 18rem;">
-    <%= image_tag listing.picture, class: "card-img-top" if listing.picture.attached? %>
-  <div class="card-body">
-    <h5 class="card-title"><%= listing.name %></h5>
-    <p>$ <%= listing.price %></p>
-    <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <%= link_to "View Product", listing_path(listing.id), class: "btn btn-primary"%>
+<div class="row">
+<% @listings.each do |listing| %>
+  <div class="col-sm-4 my-2">
+    <div class="card h-100" style="width: 18rem;" >
+      <%= image_tag listing.picture, class: "card-img-top" if listing.picture.attached? %>
+      <div class= "card-body" >
+        <p><%= listing.name%></p>
+        <p>$ <%= listing.price %></p>
+        <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
+    </div>
+    <div class="card-body">
+    <%= link_to "View Product", listing_path(listing.id)  %>
     <% if current_user.likes.pluck(:listing_id).include?(listing.id) %>
-    <p> Liked! </p>
+    <p> ❤️ </p>
+    <%= link_to 'Unlike', listing_likes_path(listing.id), method: :delete %>
     <% else %>
     <%= link_to "Favourite", listing_likes_path(listing.id), method: :post, class: "btn btn-primary" %>
-    <% end %>  
+    <% end %> 
   </div>
+    </div>
 </div>
-<%end %> 
+<% end %>
+</div>
