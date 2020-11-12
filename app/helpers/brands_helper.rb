@@ -13,4 +13,14 @@ module BrandsHelper
         "$$$$$"     
     end 
   end 
+
+
+  def description_display(speciality)
+    if speciality.length <= 100
+      speciality
+    else
+      speciality[0..100] + " ..."
+    end 
+  end 
+
 end
