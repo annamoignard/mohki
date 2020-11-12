@@ -40,15 +40,8 @@
     </div>
   </div>
 </div>
-<!-- Button trigger modal For DELETE-->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
-  Delete Brand
-</button>
-
-<!-- Actual Modal Bootstrap Stuff -->
-
-      <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete %>
-
+<!-- Button trigger For DELETE-->
+      <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete, class: "btn btn-primary" %>
 <% end %> 
 
 

@@ -1,3 +1,22 @@
+<%= render "shared/devisenavbar" %>
+
+<h1>Faves</h1>
+
+<div class="row">
 <% @likes.each do |like| %>
-  <p><%= like.listing.name %></p>
+  <div class="col-sm-4 my-2">
+    <div class="card h-100" style="width: 18rem;" >
+      <%= image_tag like.listing.picture, class: "card-img-top" if like.listing.picture.attached? %>
+      <div class= "card-body" >
+        <p><%= like.listing.name%></p>
+        <p>$ <%= like.listing.price %></p>
+        <p>Eco Stars: <%= '⭐️' * like.listing.eco_rating %></p>
+    </div>
+    <div class="card-body">
+    <button type="button" class="btn btn-primary">Purchase</button>
+    <%= link_to "View Product", listing_path(like)  %>
+  </div>
+    </div>
+</div>
 <% end %>
+</div>

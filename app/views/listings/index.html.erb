@@ -17,7 +17,7 @@
     <p> ❤️ </p>
     <%= link_to 'Unlike', listing_likes_path(listing.id), method: :delete %>
     <% else %>
-    <%= link_to "Favourite", listing_likes_path(listing.id), method: :post, class: "btn btn-primary" %>
+    <%= link_to "Love", listing_likes_path(listing.id), method: :post %>
     <% end %> 
   </div>
     </div>

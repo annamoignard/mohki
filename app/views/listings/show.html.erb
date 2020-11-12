@@ -8,12 +8,41 @@
     <h5 class="card-title"><%= @listing.name %></h5>
     <p class="card-text">Eco Stars: <%= '⭐️' * @listing.eco_rating%></p>
     <p class= "card-text">$<%= @listing.price %></p>
+    <p class= "card-text"><%= @listing.description %></p>
   <%= link_to "Back", listings_path, class: "btn btn-primary" %> 
   <%= link_to "View Brand", brand_path(@listing.brand.id), class: "btn btn-primary" %>
+      <% if current_user.likes.pluck(:listing_id).include?(@listing.id) %>
+    <p> ❤️ </p>
+    <%= link_to 'Unlike', listing_likes_path(@listing.id), method: :delete %>
+    <% else %>
+    <%= link_to "Love", listing_likes_path(@listing.id), method: :post %>
+    <% end %> 
   </div>
 </div>
 
+  <!--Modals for Edit/delete If user is signed in and made the brand -->
   <% if @listing.brand == current_user.brand %>
-    <%= link_to "Remove Listing", listing_path(@listing.id), :method => :delete %>
-    <%= link_to 'Edit Listing', edit_listing_path %>
+  <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+        Update Details
+      </button>
+        <!-- Modal for Edit -->
+        <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Edit Product</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <%= render 'listingform', listing: @listing %>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- Button trigger For DELETE-->
+    <%= link_to "Remove Listing", listing_path(@listing.id), :method => :delete,class: "btn btn-primary" %>
   <% end %> 
+
