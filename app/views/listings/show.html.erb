@@ -9,7 +9,6 @@
     <p class="card-text">Eco Stars: <%= '⭐️' * @listing.eco_rating%></p>
     <p class= "card-text">$<%= @listing.price %></p>
     <p class= "card-text"><%= @listing.description %></p>
-  <%= link_to "Back", listings_path, class: "btn btn-primary" %> 
   <%= link_to "View Brand", brand_path(@listing.brand.id), class: "btn btn-primary" %>
     <% if current_user.likes.pluck(:listing_id).include?(@listing.id) %>
     <p> ❤️ </p>

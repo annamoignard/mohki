@@ -1,16 +1,14 @@
-<div class="row">
-  <% @brands.each do |brand|%>
+<% brands.each do |brand|%>
   <div class="col-sm-4 my-2">
     <div class="card h-100" style="width: 18rem;" >
-          <%= image_tag brand.picture, class: "card-img-top" if brand.picture.attached? %>
-          <div class= "card-body" >
-            <p> <%= brand.name %></p>
-            <p> <%= description_display(brand.speciality) %></p>
-          </div>
-          <div class="card-body">
-            <%= link_to "View Profile", brand_path(brand.id)  %>
-          </div>
+      <%= image_tag brand.picture, class: "card-img-top" if brand.picture.attached? %>
+      <div class= "card-body" >
+        <p> <%= brand.name %></p>
+        <p> <%= description_display(brand.speciality) %></p>
       </div>
+      <div class="card-body">
+        <%= link_to "View Profile", brand_path(brand.id)  %>
+      </div>
+    </div>
   </div>
-    <% end %>
-</div> 
+<% end %>

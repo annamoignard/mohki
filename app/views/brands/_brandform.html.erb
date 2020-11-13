@@ -9,7 +9,7 @@
     </div>
 
     <div class="form-group">
-    <p>Average Product Price: $ <%= f.number_field :price_range %> </p>
+    <p>Average Product Price: $ <%= f.number_field :price_range, {min: 30, max: 500} %> </p>
     </div>
 
     <div class="form-group">

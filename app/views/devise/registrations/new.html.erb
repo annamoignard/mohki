@@ -35,13 +35,16 @@
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "new-password" , class: 'form-control', placeholder: 'Retype Password'%>
 </div>
-
 <button type="submit", class="btn btn-primary btn-lg btn-block">Get Started!</button>
-
 <% end %>
 
+<br>
 <div class="form-group">
-<%= render "devise/shared/links" %>
+  <%= link_to "Log in", new_session_path(resource_name), class: "btn btn-light" %>
+</div>
+
+<div class="form-group">
+  <%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-light" %>
 </div>
 
 </div>

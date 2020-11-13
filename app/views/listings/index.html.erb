@@ -2,5 +2,5 @@
 <h1>Index Page For Listings</h1>
 
 <div class="row">
-<%= render partial: "shared/listing", collection: @listings %>
+  <%= render partial: "shared/listing", locals: {listings: @listings} %>
 </div>
