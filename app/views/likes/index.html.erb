@@ -2,6 +2,10 @@
 
 <h1>Faves</h1>
 
-<div class="row">
-  <%= render partial: "shared/listing", locals: {listings: @listings} %>
-</div>
+<% if @listings.nil? %>
+  <%= link_to "Like some products to see them here!", listings_path %>
+<% else %>  
+  <div class="row">
+    <%= render partial: "shared/listing", locals: {listings: @listings} %>
+  </div>
+<% end %>
