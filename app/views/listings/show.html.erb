@@ -9,15 +9,12 @@
     <p class="card-text">Eco Stars: <%= '⭐️' * @listing.eco_rating%></p>
     <p class= "card-text">$<%= @listing.price %></p>
     <p class= "card-text"><%= @listing.description %></p>
-  <%= link_to "View Brand", brand_path(@listing.brand.id), class: "btn btn-primary" %>
-    <% if current_user.likes.pluck(:listing_id).include?(@listing.id) %>
-    <p> ❤️ </p>
-    <%= link_to 'Unlike', listing_likes_path(@listing.id), method: :delete %>
-    <% else %>
-    <%= link_to "Love", listing_likes_path(@listing.id), method: :post %>
-    <% end %> 
+  <button data-stripe="payment", id="stripe", class="btn-success">Purchase</button>
   </div>
 </div>
+  <%= link_to "Go To Brand", brand_path(@listing.brand.id), class: "btn btn-primary show-button" %>
+<script src="https://js.stripe.com/v3/"></script>
+<%= javascript_pack_tag "stripe" %>
 
   <!--Modals for Edit/delete If user is signed in and made the brand -->
   <% if @listing.brand == current_user.brand %>
@@ -44,4 +41,3 @@
 <!-- Button trigger For DELETE-->
     <%= link_to "Remove Listing", listing_path(@listing.id), :method => :delete,class: "btn btn-primary listing-button" %>
   <% end %> 
-
