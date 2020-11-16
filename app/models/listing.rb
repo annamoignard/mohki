@@ -13,8 +13,10 @@ class Listing < ApplicationRecord
   has_one_attached :picture
   has_many :likes
   
+  validates :price, presence: true
+  validates :eco_rating, presence: { message:  "You need to put a number 1 - 5"}
 
-  validates :eco_rating, presence: true
+
   scope :search_by_category, -> (category) { Listing.where(category: category)}
   scope :search_by_listing, -> (listing) { Listing.where('listings.name ILIKE ?', "%#{listing}%") }
 

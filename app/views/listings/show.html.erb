@@ -22,7 +22,7 @@
   <!--Modals for Edit/delete If user is signed in and made the brand -->
   <% if @listing.brand == current_user.brand %>
   <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+      <button type="button" class="btn btn-primary listing-button" data-toggle="modal" data-target="#editModal">
         Update Details
       </button>
         <!-- Modal for Edit -->
@@ -42,6 +42,6 @@
           </div>
         </div>
 <!-- Button trigger For DELETE-->
-    <%= link_to "Remove Listing", listing_path(@listing.id), :method => :delete,class: "btn btn-primary" %>
+    <%= link_to "Remove Listing", listing_path(@listing.id), :method => :delete,class: "btn btn-primary listing-button" %>
   <% end %> 
 

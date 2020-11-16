@@ -19,9 +19,13 @@
         <% end %>
       </li>
     </ul>
-    <%= form_with scope: :search, url: searches_path, method: 'get', local: true, html: {class:"form-inline my-2 my-lg-0" } do |f| %>
-      <%= f.text_field :search, class: "form-control mr-sm-2", type: "search", placeholder: "Search", 'aria-label': "Search" %>
-      <%= f.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0" %>
+    <% if user_signed_in? %> 
+      <%= form_with scope: :search, url: searches_path, method: 'get', local: true, html: {class:"form-inline my-2 my-lg-0" } do |f| %>
+        <%= f.text_field :search, class: "form-control mr-sm-2", type: "search", placeholder: "Search", 'aria-label': "Search" %>
+        <%= f.submit 'Search', class: "btn btn-outline-success my-2 my-sm-0" %>
+      <% end %>
+    <% else %>
+      <h2>🍄</h2>
     <% end %>
   </div>
 </nav>

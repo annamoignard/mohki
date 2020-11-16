@@ -21,7 +21,7 @@
 <!--Modals for Edit/delete If user is signed in and made the brand -->
   <% if user_signed_in? && current_user.brand == @brand %> 
   <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editModal">
+<button type="button" class="btn btn-primary brand-button" data-toggle="modal" data-target="#editModal">
   Update Details
 </button>
 <!-- Modal for Edit -->
@@ -41,7 +41,7 @@
   </div>
 </div>
 <!-- Button trigger For DELETE-->
-      <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete, class: "btn btn-primary" %>
+      <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete, class: "btn btn-primary brand-button" %>
 <% end %> 
 
 

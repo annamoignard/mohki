@@ -1,4 +1,8 @@
 <div>
+    <% if @listing.errors.any? %>
+      <%= @listing.errors.full_messages %> 
+    <% end %>
+    
     <%= form_with model: @listing, local: true do |f| %>
     <div class="form-group">
       <p>Name: <%= f.text_area :name, class: 'form-control', placeholder: 'Name' %></p>
