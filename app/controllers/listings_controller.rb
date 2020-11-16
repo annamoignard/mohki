@@ -23,10 +23,18 @@ end
   def create
     # is this not working coz it is meant to associate with brand? 
     brand = current_user.brand 
-    listing = brand.listings.new(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category], description: params[:listing][:description])
-    listing.save
-    listing.picture.attach(params[:listing][:picture])
-    redirect_to listing_path(listing.id) 
+    unless brand 
+      flash[:no_brand] = "You must create your brand first! 🌱"
+      redirect_to new_brand_path
+    else 
+      listing = brand.listings.new(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category], description: params[:listing][:description])
+      listing.picture.attach(params[:listing][:picture])
+      if listing.save
+        redirect_to listing_path(listing.id) 
+      else 
+        render :new 
+      end 
+    end 
   end 
 
   def edit

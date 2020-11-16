@@ -14,7 +14,7 @@ class Listing < ApplicationRecord
   has_many :likes
   
 
-
+  validates :eco_rating, presence: true
   scope :search_by_category, -> (category) { Listing.where(category: category)}
   scope :search_by_listing, -> (listing) { Listing.where('listings.name ILIKE ?', "%#{listing}%") }
 

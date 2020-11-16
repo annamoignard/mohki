@@ -1,0 +1,26 @@
+.home-image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.home-image {
+  display: flex;
+  margin: 30px; 
+  width: 300px;
+  height: 300px; 
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+
+.home-image:hover {
+    opacity: 1; 
+  }
+
+// .text-center {
+//     display: flex;
+//     align-content: center;
+//     justify-content: center;
+//   }

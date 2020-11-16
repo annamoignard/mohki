@@ -8,7 +8,7 @@
   <% end %> 
 
 
-<h2>Products</h2>
+<h2 class="headings">Products</h2>
 <% @brand.listings.each do |listing| %> 
 <div class="card" style="width: 18rem;">
     <%= image_tag listing.picture, class: "card-img-top" if listing.picture.attached? %>
