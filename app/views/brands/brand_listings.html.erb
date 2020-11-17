@@ -1,14 +1,6 @@
 <%= render "shared/devisenavbar" %>
 <h1><%= @brand.name %></h1>
- 
 
-  <% if user_signed_in? && current_user.brand == @brand %> 
-    <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete %>
-    <%= link_to 'Edit Brand Profile', edit_brand_path %>
-  <% end %> 
-
-
-<h2 class="headings">Products</h2>
 <% @brand.listings.each do |listing| %> 
 <div class="card" style="width: 18rem;">
     <%= image_tag listing.picture, class: "card-img-top" if listing.picture.attached? %>
@@ -17,9 +9,12 @@
     <p>$ <%= listing.price %></p>
     <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
     <p class="card-text"></p>
-    <button data-stripe="payment", id="stripe", class="btn-success">Purchase</button>
+    <button data-stripe="payment", id="stripe", class="btn btn-success">Purchase</button>
     <%= javascript_pack_tag "stripe" %>
   </div>
 </div>
 <%end %> 
 <%= link_to "Back", brands_path, class: "btn-primary back-link", type: "button" %> 
+ <% unless current_user.brand.listings.any? %>
+  <%= link_to "Create a Listing!", new_listing_path %>
+<% end %>

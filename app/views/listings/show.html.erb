@@ -1,5 +1,6 @@
 <%= render "shared/devisenavbar" %>
 
+
 <h1><%= @listing.name %></h1>
 
 <div class='listing-show'>
@@ -10,7 +11,7 @@
     <p class="card-text">Eco Stars: <%= '⭐️' * @listing.eco_rating%></p>
     <p class= "card-text">$<%= @listing.price %></p>
     <p class= "card-text"><%= @listing.description %></p>
-    <button data-stripe="payment", id="stripe", class="btn-success">Purchase</button>
+    <button data-stripe="payment", id="stripe", class="btn btn-success">Purchase</button>
   <%# <%= number_to_currency(@listing.price)%> 
   </div>
 </div>

@@ -2,7 +2,7 @@ class Brand < ApplicationRecord
   include Searchable
 
   belongs_to :user
-  has_many :listings
+  has_many :listings, dependent: :destroy
   has_one_attached :picture, dependent: :destroy
   validates :terms_of_service, acceptance: {accept: ["1" , true]}
 
