@@ -1,2 +1,4 @@
 <%= render "shared/devisenavbar" %>
 <h1>Payment Failed 😭</h1>
+<h4> Sorry <%= current_user.username%>, the payment failed!</h4>
+<%= link_to 'Keep Shopping', listings_path %>
