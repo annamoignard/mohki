@@ -8,11 +8,12 @@
         <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
       </div>
       <div class="card-body">
-        <%= link_to "View Product", listing_path(listing.id)  %>
+        <%= link_to "View", listing_path(listing.id), class: "btn-success view-link"  %>
         <% if current_user.likes.pluck(:listing_id).include?(listing.id) %>
-          <%= link_to 'Unfave', unlike_path(listing.id), method: :delete %>
-        <% else %>
-          <%= link_to '❤️', listing_likes_path(listing.id), method: :post %>
+          <p class="like">❤️</p>
+          <%= link_to 'Unlike', unlike_path(listing.id), method: :delete, class: "like" %>
+        <% else current_user.likes.includes!(listing.id) %>
+          <%= link_to 'Fave!', listing_likes_path(listing.id), method: :post, class: "like" %>
         <% end %> 
       </div>
     </div>

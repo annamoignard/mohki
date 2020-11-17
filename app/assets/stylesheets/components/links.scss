@@ -4,11 +4,35 @@
   font-size: 18px;
   display: flex;
   justify-content: center;
-
-
-}
-
-.likes:hover {
+    &:hover {
   text-decoration: none;
   color: goldenrod;
+}
+}
+
+.like {
+  display: flex; 
+  justify-content: flex-end;
+  text-decoration: none;
+  color: darkolivegreen;
+    &:hover {
+    text-decoration: none;
+    color: goldenrod;
+  }
+}
+
+.view-link {
+  text-decoration: none;
+  color: darkgrey;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  border-radius: 20%;
+  padding: 3px; 
+  background-color: lightgreen;
+    &:hover {
+      text-decoration: none;
+      color: darkgrey;
+      background-color: lightgreen;
+    }
 }
