@@ -27,7 +27,7 @@ end
       flash[:no_brand] = "You must create your brand first! 🌱"
       redirect_to new_brand_path
     else 
-      @listing = brand.listings.new(listing_params)
+      @listing = brand.listings.new(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category], description: params[:listing][:description])
       @listing.picture.attach(params[:listing][:picture])
       if @listing.save
         redirect_to listing_path(@listing.id) 

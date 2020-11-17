@@ -1,1 +1,8 @@
-<h1>SUCCESS</h1>
+<%= render "shared/devisenavbar" %>
+
+<div class="logo=container", id="top">
+<%= image_tag "MOHKILOGO.png", alt: 'mohki logo', class: 'home-logo'%>
+</div>
+
+<h4>Thank you for shopping with Mohki!</h4>
+<h5>You successfully paid <%= number_to_currency(@listing.price) %> for <%= @listing.name %></h5>

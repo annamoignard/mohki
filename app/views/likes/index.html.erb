@@ -1,6 +1,6 @@
 <%= render "shared/devisenavbar" %>
 
-<h1>Faves</h1>
+<h1><%= current_user.username%>'s Faves</h1>
 
 
 <% if @listings.any? %>
