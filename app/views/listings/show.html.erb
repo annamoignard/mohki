@@ -2,7 +2,8 @@
 
 <h1><%= @listing.name %></h1>
 
-<div class="card" style="width: 18rem;">
+<div class='listing-show'>
+<div class="card" style="width: 25rem;">
   <%= image_tag @listing.picture, class: "card-img-top" if @listing.picture.attached? %>
   <div class="card-body">
     <h5 class="card-title"><%= @listing.name %></h5>
@@ -13,7 +14,9 @@
   <%# <%= number_to_currency(@listing.price)%> 
   </div>
 </div>
+</div>
 <%= link_to "Go To Brand", brand_path(@listing.brand.id), class: "btn btn-primary show-button" %>
+
 <script src="https://js.stripe.com/v3/"></script>
 <%= javascript_pack_tag "stripe" %>
 
