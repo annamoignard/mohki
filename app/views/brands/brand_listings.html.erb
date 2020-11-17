@@ -15,6 +15,7 @@
 </div>
 <%end %> 
 <%= link_to "Back", brands_path, class: "btn-primary back-link", type: "button" %> 
- <% unless current_user.brand.listings.any? %>
-  <%= link_to "Create a Listing!", new_listing_path %>
-<% end %>
+
+ <%# <% if current_user.brand.listing.nil? %>
+  <%# <%= link_to "Create a Listing!", new_listing_path %>
+<%# <% end %> 

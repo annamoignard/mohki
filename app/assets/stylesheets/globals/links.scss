@@ -53,3 +53,15 @@
     @include btn-hover-style; 
   }
 }
+
+.top {
+  @include link-style;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5px;
+  &:hover {
+    @include link-hover-style; 
+    text-align: center;
+  }
+
+}
