@@ -4,5 +4,13 @@
 <%= image_tag "MOHKILOGO.png", alt: 'mohki logo', class: 'home-logo'%>
 </div>
 
-<h4>Thank you for shopping with Mohki!</h4>
-<h5>You successfully paid <%= number_to_currency(@listing.price) %> for <%= @listing.name %></h5>
+<div class='success'>
+  <h4>Thank you <%= current_user.username %> for shopping with Mohki!</h4>
+  <h5>You successfully paid <%= number_to_currency(@listing.price) %> for <%= @listing.name %></h5>
+  <p>A confirmation email will be sent to your account once your parcel has been shipped!</p>
+</div>
+
+<div class='success-container'>
+<%= image_tag @listing.picture, class: "card-img-top success-img" if @listing.picture.attached? %>
+</div>
+<%= link_to 'Keep Shopping!', listings_path %>
