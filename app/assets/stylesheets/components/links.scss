@@ -1,38 +1,55 @@
-.likes {
+@mixin btn-hover-style {
+  text-decoration: none;
+  color: goldenrod;
+  background-color: lightseagreen;
+}
+
+@mixin link-style {
   text-decoration: none;
   color: darkgreen;
   font-size: 18px;
+}
+
+@mixin link-hover-style {
+  text-decoration: none;
+  color: goldenrod;
+}
+
+.likes {
+  @include link-style;
   display: flex;
   justify-content: center;
     &:hover {
-  text-decoration: none;
-  color: goldenrod;
+      @include link-hover-style;
 }
 }
 
 .like {
+  @include link-style; 
   display: flex; 
   justify-content: flex-end;
-  text-decoration: none;
-  color: darkolivegreen;
     &:hover {
-    text-decoration: none;
-    color: goldenrod;
+      @include link-hover-style; 
   }
 }
 
 .view-link {
   text-decoration: none;
-  color: darkgrey;
+  color: white;
   position: absolute;
   bottom: 5px;
   left: 5px;
-  border-radius: 20%;
-  padding: 3px; 
-  background-color: lightgreen;
+  border-radius: 10%;
+  padding: 6px; 
+  background-color: lightseagreen;
     &:hover {
-      text-decoration: none;
-      color: darkgrey;
-      background-color: lightgreen;
+      @include btn-hover-style; 
     }
+}
+
+.back-link {
+  margin-top: 40px;
+  &:hover {
+    @include btn-hover-style; 
+  }
 }

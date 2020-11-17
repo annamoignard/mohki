@@ -17,8 +17,7 @@
     <p>$ <%= listing.price %></p>
     <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <%= link_to "View Product", listing_path(listing.id), class: "btn btn-primary"%>
   </div>
 </div>
 <%end %> 
-<%= link_to "Back", brands_path %> 
+<%= link_to "Back", brands_path, class: "btn-primary back-link", type: "button" %> 
