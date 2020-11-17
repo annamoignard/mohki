@@ -16,7 +16,9 @@
     <h5 class="card-title"><%= listing.name %></h5>
     <p>$ <%= listing.price %></p>
     <p>Eco Stars: <%= '⭐️' * listing.eco_rating %></p>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <p class="card-text"></p>
+    <button data-stripe="payment", id="stripe", class="btn-success">Purchase</button>
+    <%= javascript_pack_tag "stripe" %>
   </div>
 </div>
 <%end %> 

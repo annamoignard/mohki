@@ -1,9 +1,9 @@
 <%= render "shared/devisenavbar" %>
-<h1><%= @brand.name %></h1>
+<h1 class='brand-show-header'><%=@brand.name%></h1>
 
+<div class='brand-show'>
 
-
-<div class="card" style="width: 18rem;">
+<div class="card" style="width: 30rem;">
     <%= image_tag @brand.picture, class: "card-img-top" if @brand.picture.attached? %>
   <div class="card-body">
     <h5 class="card-title"><%= @brand.name %></h5>
@@ -16,8 +16,9 @@
   <%= link_to "View Products", brand_listings_path %> 
   </div>
 </div> 
+</div>
 
-
+<div class="profile-buttons">
 <!--Modals for Edit/delete If user is signed in and made the brand -->
   <% if user_signed_in? && current_user.brand == @brand %> 
   <!-- Button trigger modal -->
@@ -44,4 +45,4 @@
       <%= link_to "Delete Brand Profile", brand_path(@brand.id), :method => :delete, class: "btn btn-primary brand-button" %>
 <% end %> 
 
-
+</div>
