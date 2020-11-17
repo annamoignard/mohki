@@ -10,9 +10,10 @@
     <p class= "card-text">$<%= @listing.price %></p>
     <p class= "card-text"><%= @listing.description %></p>
   <button data-stripe="payment", id="stripe", class="btn-success">Purchase</button>
+  <%# <%= number_to_currency(@listing.price)%> 
   </div>
 </div>
-  <%= link_to "Go To Brand", brand_path(@listing.brand.id), class: "btn btn-primary show-button" %>
+<%= link_to "Go To Brand", brand_path(@listing.brand.id), class: "btn btn-primary show-button" %>
 <script src="https://js.stripe.com/v3/"></script>
 <%= javascript_pack_tag "stripe" %>
 

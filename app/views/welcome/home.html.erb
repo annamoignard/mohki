@@ -1,6 +1,6 @@
 <%= render "shared/devisenavbar" %>
 
-<div class="logo=container">
+<div class="logo=container", id="top">
 <%= image_tag "MOHKILOGO.png", alt: 'mohki logo', class: 'home-logo'%>
 </div>
 
@@ -21,7 +21,7 @@
   </div>
 
   <div class="text-center">
-    <h2>Mohki Store</h2>
+    <h2>Shop</h2>
   <%= link_to brands_path do %> 
     <%= image_tag "blog.jpg", class: "home-image" %>
   <% end %>
@@ -97,12 +97,19 @@
         quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non 
         numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.  
       </p>
-    <h4>Compostable Packaging</h4> 
+    <h4>About Our Compostable Packaging</h4> 
       <p>
         sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro 
         quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non 
         numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.  
+      </p>
+    <h4>How Do We Reduce Our Carbon Footprint?</h4>
+      <p>
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+        totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta 
+        sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, 
+        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
       </p>
     <h4>Returns Policy</h4>
       <p>
@@ -112,13 +119,17 @@
         sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
       </p>
 
+
     <div class="contact-us">    
       <h5>Contact Us</h5>
-        <p>Email: mohki@skincarehub.com</p>
-        <p>Phone: mohki@skincarehub.com</p>
+        <p><strong>Email:</strong> mohki@skincarehub.com</p>
+        <p><strong>Phone:</strong> 1800 MOHKI</p>
     </div>
 
   </div>
 
-  <footer>
-  </footer>
+  <%= link_to "#top" do %> 
+    <%= "Back To Top" %>
+  <% end %>
+
+  <footer>&copy; 2020, Mohki.Inc</footer>

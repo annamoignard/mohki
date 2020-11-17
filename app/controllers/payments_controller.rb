@@ -1,5 +1,6 @@
 class PaymentsController < ApplicationController
   before_action :authenticate_user!, except: [:webhook]
+  skip_before_action :verify_authenticity_token, only: [:create, :webhook]
 
   def create
     listing = Listing.find(params[:id])
@@ -11,9 +12,11 @@ class PaymentsController < ApplicationController
           currency: 'aud',
           product_data: {
             name: listing.name,
-            eco_rating: listing.eco_rating,
-            description: listing.description,
-            category: listing.category
+            metadata: {
+              eco_rating: listing.eco_rating,
+              description: listing.description,
+              category: listing.category
+            }
           },
         },
         quantity: 1,
@@ -28,8 +31,8 @@ class PaymentsController < ApplicationController
 #  will assist with what page to display
 
   def webhook 
-    endpoint_secret = Rails.application.credentials.dig(:stripe, :endpoint_secret)
-    begin
+    endpoint_secret = Rails.application.credentials[Rails.env.to_sym][:stripe][:endpoint_secret]
+    begin 
       sig_header = request.env['HTTP_STRIPE_SIGNATURE']
       payload = request.body.read
       event = Stripe::Webhook.construct_event(payload, sig_header, endpoint_secret)
@@ -48,6 +51,7 @@ class PaymentsController < ApplicationController
       # write to the database that a listing is still available
       # reach out to the customer to say that the payment was unsuccessful
     end
+    
   end
 
   def success
