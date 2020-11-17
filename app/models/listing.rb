@@ -10,8 +10,8 @@ class Listing < ApplicationRecord
   }
 
   belongs_to :brand
-  has_one_attached :picture
-  has_many :likes
+  has_one_attached :picture, dependent: :destroy
+  has_many :likes, dependent: :destroy
   
   validates :price, presence: true
   validates :eco_rating, presence: { message:  "You need to put a number 1 - 5"}
