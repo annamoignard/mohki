@@ -2,5 +2,5 @@
 <%= form_with(scope: :search, url: listings_path, method: 'get', local: true) do |f| %>
   <%= f.label :category %>
   <%= f.select :category, ['Body Care', 'Hair Care', 'Skincare', 'Make-Up', 'Luxury'] %>
-  <%= f.submit 'Search' %>
+  <div class="btn-center"><%= f.submit 'Search', class: "btn btn-basic" %></div>
 <% end %> 

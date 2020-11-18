@@ -4,6 +4,7 @@ class ListingsController < ApplicationController
   before_action :check_seller!, only: [:new, :create]
   before_action :authorize_user!, only: [:edit, :update, :destroy]
 
+  # displays all listings and search function results for listings
 def index
   if params[:search].present?
     @listings = Listing.search_by(search_params)
@@ -21,7 +22,7 @@ end
   end
 
   def create
-    # is this not working coz it is meant to associate with brand? 
+    # users cannot create listings without a brand therefore will be redirected if they haven't got a brand
     brand = current_user.brand 
     unless brand 
       flash[:no_brand] = "You must create your brand first! 🌱"
@@ -36,7 +37,7 @@ end
       end 
     end 
   end 
-
+  # owner of listing can edit their listing via a modal
   def edit
     @listing = Listing.find(params[:id])
   end

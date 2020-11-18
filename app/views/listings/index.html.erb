@@ -1,6 +1,9 @@
 <%= render "shared/devisenavbar" %>
+
 <h1>Products</h1>
+<div class="category-search"><%= render "shared/listingsearchform"%></div>
 
 <div class="row">
   <%= render partial: "shared/listing", locals: {listings: @listings} %>
 </div>
+

@@ -16,7 +16,7 @@ class Listing < ApplicationRecord
   validates :price, presence: true
   validates :eco_rating, presence: { message:  "You need to put a number 1 - 5"}
 
-
+  # searching functions in nav bar
   scope :search_by_category, -> (category) { Listing.where(category: category)}
   scope :search_by_listing, -> (listing) { Listing.where('listings.name ILIKE ?', "%#{listing}%") }
 
