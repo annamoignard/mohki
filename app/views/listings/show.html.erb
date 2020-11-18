@@ -11,6 +11,7 @@
     <p class="card-text">Eco Stars: <%= '⭐️' * @listing.eco_rating%></p>
     <p class= "card-text">$<%= @listing.price %></p>
     <p class= "card-text"><%= @listing.description %></p>
+    <p class= "card-text"><%= @listing.category %></p>
     <button data-stripe="payment", id="stripe", class="btn btn-success">Purchase</button>
   <%# <%= number_to_currency(@listing.price)%> 
   </div>
