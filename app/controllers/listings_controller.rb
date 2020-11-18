@@ -44,6 +44,8 @@ end
 
   def update
     @listing.update(name: params[:listing][:name], price: params[:listing][:price], eco_rating: params[:listing][:eco_rating], category: params[:listing][:category], description: params[:listing][:description])
+    @listing.picture.purge 
+    @listing.picture.attach(params[:listing][:picture])
     redirect_to listing_path(@listing.id)
   end
 
