@@ -43,13 +43,11 @@ class BrandsController < ApplicationController
 
   def update
     @brand.update(brand_params)
-    # @brand.update(name: params[:brand][:name], price_range: params[:brand][:price_range], speciality: params[:brand][:speciality])
     redirect_to brand_path(@brand.id)
   end
 
   def destroy
     @brand.destroy
-    #need a flash message in here or something 'are you SURE?'
     redirect_to brands_path
     #successfully deleted (button = home)
   end
